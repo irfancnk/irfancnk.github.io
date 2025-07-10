@@ -83,7 +83,7 @@ export function Navigation() {
                 size="sm"
                 className="hidden sm:flex items-center space-x-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300"
                 onClick={() => {
-                  window.open("/cv.pdf", "_blank")
+                  window.open("/documents/resume.pdf", "_blank")
                 }}
               >
                 <Download className="w-4 h-4" />
@@ -133,7 +133,7 @@ export function Navigation() {
                   className="w-full justify-center space-x-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white"
                   onClick={() => {
                     setIsOpen(false)
-                    window.open("/cv.pdf", "_blank")
+                    window.open("/documents/resume.pdf", "_blank")
                   }}
                 >
                   <Download className="w-4 h-4" />
