@@ -47,7 +47,7 @@ export function Footer() {
           </div>
           
           <div className="text-center text-sm text-gray-500">
-            <p>© 2024 Irfan Can Kaleli. All rights reserved.</p>
+            <p>© 2025 Irfan Can Kaleli. All rights reserved.</p>
             <p className="mt-1">Built with Next.js, React, and Tailwind CSS</p>
           </div>
         </div>
