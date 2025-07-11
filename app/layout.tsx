@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://irfancnk.com'),
+  metadataBase: new URL('https://www.irfanck.com'),
   title: 'Irfan Can Kaleli - Senior Full-Stack Engineer',
   description: 'Personal portfolio of Irfan Can Kaleli, a senior full-stack engineer with 7+ years experience in Node.js, React, and scalable web applications.',
   keywords: ['Full-Stack Engineer', 'React', 'Node.js', 'TypeScript', 'JavaScript', 'AWS', 'Docker'],
