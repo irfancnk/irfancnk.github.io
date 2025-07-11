@@ -32,21 +32,18 @@ export function AboutSection() {
             <Card className="card-hover border border-gray-700 bg-gray-800">
               <CardContent className="p-8">
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  With over <span className="font-semibold text-purple-400">7 years of experience</span> in full-stack development, 
-                  I specialize in building scalable web applications using <span className="font-semibold text-purple-400">Node.js</span> and <span className="font-semibold text-purple-400">React</span>. 
-                  My expertise spans from architecting microservices to crafting pixel-perfect user interfaces.
+                  A backend developer who can handle the frontend when needed, with <span className="font-semibold text-purple-400">7+ years of experience</span> building 
+                  reliable, scalable applications using JavaScript technologies, especially <span className="font-semibold text-purple-400">Node.js</span> and <span className="font-semibold text-purple-400">React</span>.
                 </p>
                 
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  I'm passionate about <span className="font-semibold text-purple-400">performance optimization</span>, 
-                  <span className="font-semibold text-purple-400"> scalability</span>, and <span className="font-semibold text-purple-400">reliability</span>. 
-                  Whether it's reducing search latency by 60% or building component libraries adopted by multiple teams, 
-                  I focus on solutions that make a real impact.
+                  I'm the person who quietly solves the hard stuff - <span className="font-semibold text-purple-400">no panic, no noise</span>, 
+                  just clear thinking and steady delivery. I enjoy turning complex requirements into simple, maintainable solutions.
                 </p>
                 
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Currently, I'm working on cutting-edge e-commerce platforms and exploring the latest in 
-                  cloud technologies, always looking for ways to push the boundaries of what's possible on the web.
+                  I thrive in environments where <span className="font-semibold text-purple-400">code quality</span>, 
+                  <span className="font-semibold text-purple-400"> collaboration</span>, and <span className="font-semibold text-purple-400">product impact</span> matter.
                 </p>
               </CardContent>
             </Card>

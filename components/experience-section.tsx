@@ -13,38 +13,38 @@ const experiences = [
     period: "2022 - Present",
     location: "Dubai, UAE",
     achievements: [
-      "Reduced e-commerce search latency by 60% through Elasticsearch optimization",
-      "Built real-time inventory management system handling 1M+ products",
-      "Implemented micro-frontend architecture adopted across 3 teams",
-      "Led migration from monolith to microservices, improving deployment speed by 75%"
+      "Optimized product search and indexing using Elasticsearch and OpenSearch",
+      "Built scalable catalog features for multi-brand luxury e-commerce platform",
+      "Integrated systems via Redis, RabbitMQ, and Magento APIs",
+      "Deployed services using AWS, Docker, and Kubernetes with CI/CD"
     ],
-    technologies: ["React", "Node.js", "AWS", "Elasticsearch", "Docker", "Kubernetes"]
+    technologies: ["Node.js", "React", "PostgreSQL", "Elasticsearch", "AWS", "Docker"]
   },
   {
     company: "Kargo Global",
-    position: "Full-Stack Engineer",
+    position: "Full-Stack Engineer", 
     period: "2021 - 2022",
-    location: "Istanbul, Turkey",
+    location: "New York, US (Remote)",
     achievements: [
-      "Developed React component library adopted by 5 development teams",
-      "Optimized database queries reducing response time by 40%",
-      "Implemented automated testing pipeline with 90% code coverage",
-      "Built responsive admin dashboard serving 1000+ daily active users"
+      "Built shared ReactJS component library for mobile ad creation platform",
+      "Developed with TypeScript, Material UI for consistent user experience", 
+      "Implemented end-to-end testing with Cypress for UI reliability",
+      "Deployed services via Docker on Google Cloud Platform"
     ],
-    technologies: ["React", "TypeScript", "PostgreSQL", "Express", "Jest", "CI/CD"]
+    technologies: ["React", "TypeScript", "Node.js", "MySQL", "GCP", "Cypress"]
   },
   {
     company: "Onbiron R&D",
     position: "Software Engineer",
-    period: "2018 - 2021",
+    period: "2018 - 2021", 
     location: "Ankara, Turkey",
     achievements: [
-      "Built real-time monitoring microservices on AWS handling 10K+ events/sec",
-      "Developed IoT data collection platform processing 1TB+ daily data",
-      "Created automated deployment pipeline reducing release time by 80%",
-      "Mentored 3 junior developers on modern JavaScript and cloud technologies"
+      "Developed microservice-based real-time monitoring systems",
+      "Built network analyzer with Python, PyQt for traffic visualization",
+      "Created military-grade event-driven systems for secure environments",
+      "Delivered full-stack apps using AWS services and .NET integrations"
     ],
-    technologies: ["Node.js", "AWS", "MongoDB", "Redis", "Docker", "Microservices"]
+    technologies: ["Node.js", "React", "Python", "AWS", "PostgreSQL", "Elasticsearch"]
   }
 ]
 

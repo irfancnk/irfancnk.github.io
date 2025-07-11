@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.irfanck.com'),
   title: 'Irfan Can Kaleli - Senior Full-Stack Engineer',
-  description: 'Personal portfolio of Irfan Can Kaleli, a senior full-stack engineer with 7+ years experience in Node.js, React, and scalable web applications.',
+  description: 'Backend developer who can handle frontend when needed, with 7+ years experience building reliable, scalable applications using JavaScript technologies.',
   keywords: ['Full-Stack Engineer', 'React', 'Node.js', 'TypeScript', 'JavaScript', 'AWS', 'Docker'],
   authors: [{ name: 'Irfan Can Kaleli' }],
   viewport: 'width=device-width, initial-scale=1',
