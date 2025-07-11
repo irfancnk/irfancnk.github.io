@@ -14,7 +14,7 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white">
       <CustomCursor />
       <Navigation />
-      <main>
+      <main role="main">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

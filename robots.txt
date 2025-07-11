@@ -1,3 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /api/
+
+Sitemap: https://www.irfanck.com/sitemap.xml
+
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:

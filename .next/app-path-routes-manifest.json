@@ -1,4 +1,5 @@
 {
   "/_not-found": "/_not-found",
-  "/page": "/"
+  "/page": "/",
+  "/sitemap.xml/route": "/sitemap.xml"
 }
