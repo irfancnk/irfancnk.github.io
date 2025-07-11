@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   themeColor: [
     { media: '(prefers-color-scheme: dark)', color: '#000000' }
   ],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Irfan Can Kaleli - Senior Full-Stack Engineer',
     description: 'Personal portfolio showcasing expertise in modern web technologies and scalable applications.',
