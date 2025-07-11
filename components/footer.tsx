@@ -24,9 +24,9 @@ export function Footer() {
           
           <div className="flex space-x-6">
             {[
-              { icon: <Mail className="w-5 h-5" />, href: "mailto:irfancankaleli@gmail.com", label: "Email" },
-              { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/in/irfancankaleli", label: "LinkedIn" },
-              { icon: <Github className="w-5 h-5" />, href: "https://github.com/irfancankaleli", label: "GitHub" }
+              { icon: <Mail className="w-5 h-5" />, href: "mailto:irfancnkaleli@gmail.com", label: "Email" },
+              { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/in/irfan-can-kaleli", label: "LinkedIn" },
+              { icon: <Github className="w-5 h-5" />, href: "https://github.com/irfancnk", label: "GitHub" }
             ].map((social, index) => (
               <motion.a
                 key={social.label}
