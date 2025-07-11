@@ -3,8 +3,8 @@
 import * as React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Award, Network, Monitor } from "lucide-react"
+
+import { Award, Network, Monitor } from "lucide-react"
 import { motion } from "framer-motion"
 
 const projects = [
@@ -13,33 +13,21 @@ const projects = [
     description: "A comprehensive competitive programming platform with real-time judging, leaderboards, and analytics. Achieved 3rd place in national algorithm competition.",
     icon: <Award className="w-8 h-8 text-purple-400" />,
     technologies: ["React", "Node.js", "PostgreSQL", "Redis", "Socket.io"],
-    achievements: ["1000+ active users", "Real-time judging", "3rd place nationally"],
-    links: {
-      demo: "https://algorithm-platform.demo",
-      github: "https://github.com/irfancankaleli/algorithm-platform"
-    }
+    achievements: ["1000+ active users", "Real-time judging", "3rd place nationally"]
   },
   {
     title: "Network Traffic Analyzer",
     description: "Advanced network monitoring tool with machine learning-based anomaly detection. Features real-time traffic analysis and predictive maintenance alerts.",
     icon: <Network className="w-8 h-8 text-purple-400" />,
     technologies: ["Python", "TensorFlow", "React", "D3.js", "WebSockets"],
-    achievements: ["ML-based detection", "Real-time monitoring", "99.9% accuracy"],
-    links: {
-      demo: "https://network-analyzer.demo",
-      github: "https://github.com/irfancankaleli/network-analyzer"
-    }
+    achievements: ["ML-based detection", "Real-time monitoring", "99.9% accuracy"]
   },
   {
     title: "Desktop Productivity Suite",
     description: "Cross-platform desktop application built with Electron. Includes task management, time tracking, and team collaboration features.",
     icon: <Monitor className="w-8 h-8 text-purple-400" />,
     technologies: ["Electron", "React", "TypeScript", "SQLite", "Node.js"],
-    achievements: ["Cross-platform", "Offline-first", "10K+ downloads"],
-    links: {
-      demo: "https://productivity-suite.demo",
-      github: "https://github.com/irfancankaleli/productivity-suite"
-    }
+    achievements: ["Cross-platform", "Offline-first", "10K+ downloads"]
   }
 ]
 
@@ -108,38 +96,7 @@ export function ProjectsSection() {
                       ))}
                     </div>
                     
-                    <div className="flex gap-2 pt-2">
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1"
-                      >
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() => window.open(project.links.demo, '_blank')}
-                          className="w-full border-gray-600 text-gray-300 hover:bg-purple-600 hover:text-white hover:border-purple-600"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Demo
-                        </Button>
-                      </motion.div>
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1"
-                      >
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() => window.open(project.links.github, '_blank')}
-                          className="w-full border-gray-600 text-gray-300 hover:bg-purple-600 hover:text-white hover:border-purple-600"
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </Button>
-                      </motion.div>
-                    </div>
+
                   </div>
                 </CardContent>
               </Card>
