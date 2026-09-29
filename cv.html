@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Irfan Can Kaleli — CV</title>
+    <meta name="description" content="CV of Irfan Can Kaleli, Senior Full-Stack Engineer (backend-first, Node.js & React)." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <style>
+      /* A4 résumé. Single reading order for ATS parsers; real text everywhere. */
+      @page {
+        size: A4;
+        margin: 13mm 15mm 14mm;
+        @bottom-left {
+          content: 'Irfan Can Kaleli — CV';
+          font: 500 7.5pt 'Geist Mono', monospace;
+          color: #8a8792;
+        }
+        @bottom-right {
+          content: counter(page) ' / ' counter(pages);
+          font: 500 7.5pt 'Geist Mono', monospace;
+          color: #8a8792;
+        }
+      }
+      :root {
+        --ink: #121116;
+        --ink-2: #3f3e46;
+        --ink-3: #75727d;
+        --line: #e6e3de;
+        --accent: #0066cc;
+        --paper: #ffffff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        background: #e8e8ed;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font: 400 9.2pt/1.42 'Geist', 'Helvetica Neue', Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .sheet {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 24px auto;
+        padding: 13mm 15mm 14mm;
+        background: var(--paper);
+        box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.35);
+      }
+      @media print {
+        html {
+          background: none;
+        }
+        .sheet {
+          width: auto;
+          min-height: 0;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+        }
+        .screen-only {
+          display: none !important;
+        }
+      }
+      h1,
+      h2,
+      h3,
+      p,
+      ul {
+        margin: 0;
+      }
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      b {
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .mono {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+      }
+
+      /* Header */
+      .head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 6mm;
+        align-items: end;
+        padding-bottom: 4.5mm;
+        border-bottom: 1.4pt solid var(--ink);
+        border-image: linear-gradient(90deg, #0a84ff, #7b5cff 38%, #e14bd0 70%, #ff8a3d) 1;
+      }
+      h1 {
+        font-weight: 600;
+        font-size: 27pt;
+        line-height: 1;
+        letter-spacing: -0.015em;
+      }
+      .title {
+        margin-top: 2.4mm;
+        font-size: 11pt;
+        color: var(--ink-2);
+      }
+      .title em {
+        font-style: normal;
+        color: var(--ink-3);
+      }
+      .contact {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.6mm 6mm;
+        font: 500 7.9pt/1.45 'Geist Mono', ui-monospace, monospace;
+        color: var(--ink-2);
+        text-align: right;
+      }
+      /* The phone is drawn as pixels (never text), revealed on click or when printed. */
+      .phone canvas {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .phone-btn {
+        padding: 0;
+        border: 0;
+        background: none;
+        font: inherit;
+        color: var(--accent);
+        cursor: pointer;
+      }
+      .phone-btn:hover {
+        text-decoration: underline;
+      }
+
+      /* Sections */
+      section {
+        margin-top: 4mm;
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 3mm;
+        margin-bottom: 2.4mm;
+        font: 600 8.6pt/1 'Geist Mono', ui-monospace, monospace;
+        letter-spacing: 0;
+        color: var(--accent);
+      }
+      h2::after {
+        content: '';
+        flex: 1;
+        height: 0.6pt;
+        background: var(--line);
+      }
+      .summary p {
+        color: var(--ink-2);
+      }
+      .summary p + p {
+        margin-top: 1.8mm;
+      }
+      .summary .quote {
+        color: var(--ink-2);
+      }
+      .core {
+        margin-top: 2.4mm;
+        font-size: 8.8pt;
+        color: var(--ink-2);
+      }
+      .core b {
+        font: 600 7.6pt 'Geist Mono', monospace;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        margin-right: 2mm;
+      }
+
+      .bullets {
+        padding-left: 4mm;
+        list-style: '–  ';
+      }
+      .bullets li {
+        color: var(--ink-2);
+        break-inside: avoid;
+      }
+      .bullets li::marker {
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .bullets li + li {
+        margin-top: 0.7mm;
+      }
+
+      .hl-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2mm 6mm;
+        padding-left: 0;
+        list-style: none;
+      }
+      .hl-list .where {
+        display: block;
+        font: 500 7.4pt/1.3 'Geist Mono', monospace;
+        letter-spacing: 0.01em;
+        color: var(--ink-3);
+      }
+
+      .job {
+        padding-top: 2.6mm;
+      }
+      .job-head,
+      .ctx {
+        break-after: avoid;
+      }
+      .sp {
+        white-space: pre;
+      }
+      .job + .job {
+        margin-top: 2.6mm;
+        border-top: 0.6pt solid var(--line);
+      }
+      .job-head {
+        display: block;
+      }
+      .job-head .when {
+        margin-top: 0.5mm;
+        text-align: left;
+      }
+      .job h3 {
+        font-weight: 600;
+        font-size: 11.5pt;
+        letter-spacing: -0.015em;
+      }
+      .job h3 span {
+        font-weight: 400;
+        color: var(--ink-2);
+      }
+      .when {
+        flex: none;
+        font: 500 7.9pt/1.3 'Geist Mono', monospace;
+        letter-spacing: 0.04em;
+        color: var(--ink-2);
+        text-align: right;
+      }
+      .ctx {
+        margin: 0.6mm 0 1.6mm;
+        font-size: 8.6pt;
+        color: var(--ink-3);
+      }
+      .stack {
+        margin-top: 1.4mm;
+        font: 500 7.5pt/1.4 'Geist Mono', monospace;
+        letter-spacing: 0.02em;
+        color: var(--ink-3);
+      }
+
+      .interns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5mm;
+      }
+      .interns .job {
+        padding-top: 0;
+        border: 0;
+        margin: 0;
+        break-inside: avoid;
+      }
+      .interns h3 {
+        font-size: 10pt;
+      }
+      .interns .when {
+        text-align: left;
+        margin: 0.4mm 0 1.2mm;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: 34mm 1fr;
+        gap: 1.4mm 5mm;
+      }
+      .skills dt {
+        font: 600 7.4pt/1.6 'Geist Mono', monospace;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+      }
+      .skills dd {
+        margin: 0;
+        color: var(--ink-2);
+      }
+      .skills dd strong {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .cols {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 8mm;
+      }
+      .entry + .entry {
+        margin-top: 2.2mm;
+      }
+      .entry .when {
+        margin: 0.3mm 0 0.6mm;
+        text-align: left;
+      }
+      .entry-head b {
+        font-size: 9.6pt;
+      }
+      .entry p {
+        color: var(--ink-2);
+      }
+      .langs li {
+        display: flex;
+        justify-content: space-between;
+        padding: 1mm 0;
+        border-bottom: 0.6pt solid var(--line);
+      }
+      .langs li:last-child {
+        border-bottom: 0;
+      }
+      .langs span:last-child {
+        font: 500 7.9pt 'Geist Mono', monospace;
+        color: var(--ink-2);
+      }
+      .foot-note {
+        margin-top: 5mm;
+        font: 500 7.5pt/1.4 'Geist Mono', monospace;
+        color: var(--ink-3);
+      }
+      .foot-note a {
+        color: var(--accent);
+      }
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.72);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        font: 400 14px/1 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Geist', sans-serif;
+        letter-spacing: -0.01em;
+      }
+      .toolbar a,
+      .toolbar button {
+        padding: 9px 16px;
+        border-radius: 980px;
+        border: 0;
+        background: rgba(0, 0, 0, 0.05);
+        color: #1d1d1f;
+        font: inherit;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .toolbar a:hover,
+      .toolbar button:hover {
+        background: rgba(0, 0, 0, 0.09);
+      }
+      .toolbar .primary {
+        background: #0071e3;
+        color: #fff;
+      }
+      .toolbar .primary:hover {
+        background: #0077ed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar screen-only">
+      <a href="index.html">← Back to the site</a>
+      <a class="primary" href="files/Irfan-Can-Kaleli-CV.pdf" download>Download PDF</a>
+      <button type="button" onclick="print()">Print</button>
+    </div>
+
+    <main class="sheet">
+      <header class="head">
+        <div>
+          <h1>Irfan Can Kaleli</h1>
+          <p class="title">Senior Full-Stack Engineer · <em>Backend-first</em></p>
+        </div>
+        <ul class="contact" aria-label="Contact">
+          <li><a href="mailto:irfancnkaleli@gmail.com">irfancnkaleli@gmail.com</a></li>
+          <li class="phone" id="phoneSlot"><button type="button" class="phone-btn screen-only" id="revealPhone">Phone · show number</button></li>
+          <li><a href="https://www.linkedin.com/in/irfan-can-kaleli/">linkedin.com/in/irfan-can-kaleli</a></li>
+          <li><a href="https://github.com/irfancnk">github.com/irfancnk</a></li>
+          <li><a href="https://www.irfanck.com/">irfanck.com</a></li>
+          <li>Çankaya, Ankara, Turkey</li>
+        </ul>
+      </header>
+
+      <section class="summary">
+        <h2>SUMMARY</h2>
+        <p>
+          Backend-first full-stack engineer with <span data-years>8</span>+ years building reliable, scalable products in Node.js and React — for a
+          multi-brand luxury e-commerce platform, a mobile ad-tech company and high-security R&amp;D. Remote-first since 2021, working with teams in
+          Dubai and New York from Ankara.
+        </p>
+        <p class="quote">I’m the person who quietly solves the hard stuff — no panic, no noise, just clear thinking and steady delivery.</p>
+        <p>I enjoy turning complex requirements into simple, maintainable solutions, and thrive where code quality, collaboration and product impact matter.</p>
+        <p class="core"><b>Core stack</b>Node.js · React · TypeScript · PostgreSQL · Elasticsearch · Redis · RabbitMQ · AWS · Kubernetes</p>
+      </section>
+
+      <section>
+        <h2>SELECTED HIGHLIGHTS</h2>
+        <ul class="bullets hl-list">
+          <li><b>Search &amp; catalog at scale.</b> Product listing, indexing and search across multiple regions for a multi-country luxury platform. <span class="where">Ounass · Elasticsearch, OpenSearch, Fredhopper</span></li>
+          <li><b>Shared React component library.</b> Built and maintained the library used across multiple projects, with Cypress E2E coverage. <span class="where">Kargo · React, TypeScript, Material UI</span></li>
+          <li><b>Military-grade, event-driven systems.</b> Secure-environment systems and a microservice-based real-time monitoring system. <span class="where">Onbiron R&amp;D · RabbitMQ, Redis, .NET</span></li>
+          <li><b>Network traffic analytics.</b> A network analyzer visualizing cross-network traffic patterns. <span class="where">Onbiron R&amp;D · Python, PyQt, Tshark, Elasticsearch, Kibana</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>EXPERIENCE</h2>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Ounass <span>— Full-Stack Engineer, Catalog team</span></h3>
+            <p class="when">Jan 2022 – Present · Dubai, UAE (Remote)</p>
+          </div>
+          <p class="ctx">Multi-brand, multi-country luxury e-commerce platform serving the Middle East. Catalog team: how products are indexed, listed and found, from data pipeline to storefront.</p>
+          <ul class="bullets">
+            <li><b>Search &amp; discovery:</b> build and maintain high-performance product listing and search across multiple regions (relevance, facets, filters and sorting) on Elasticsearch, OpenSearch and Fredhopper.</li>
+            <li><b>Product indexing:</b> handle product indexing so catalog changes reach search and listing pages quickly and consistently in every region.</li>
+            <li><b>Multi-brand, multi-region:</b> deliver listing and search for many brands and countries on one shared platform, with regional catalogs.</li>
+            <li><b>Full-stack features:</b> ship scalable features end to end with Node.js, React and PostgreSQL, from API and data model to storefront UI.</li>
+            <li><b>Integrations:</b> connect catalog and platform systems through Redis caching, RabbitMQ messaging and Magento APIs.</li>
+            <li><b>Cloud &amp; reliability:</b> deploy and run services on AWS with Docker and Kubernetes; monitor performance and logs with Datadog, New Relic and Kibana.</li>
+            <li><b>Delivery:</b> ship continuously through a Jenkins CI/CD pipeline, collaborating remotely with the Dubai team via JIRA, Git and Slack.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Kargo Global Ltd. <span>— Full-Stack Engineer</span></h3>
+            <p class="when">Apr 2021 – Nov 2022 · New York, US (Remote)</p>
+          </div>
+          <p class="ctx">Platform for mobile-oriented ad creation.</p>
+          <ul class="bullets">
+            <li><b>Component library:</b> built and maintained a shared React component library used across multiple projects, with a consistent UI built on Material UI.</li>
+            <li><b>Product engineering:</b> developed features with Node.js, React, TypeScript and MySQL.</li>
+            <li><b>Quality:</b> wrote end-to-end tests in Cypress to keep the UI reliable.</li>
+            <li><b>Deployment:</b> deployed services with Docker on Google Cloud Platform (GCP).</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3>Onbiron R&amp;D Ltd. <span>— Software Engineer</span></h3>
+            <p class="when">Jul 2018 – Apr 2021 · Ankara, Turkey</p>
+          </div>
+          <p class="ctx">Full-cycle development across varied tech stacks in high-security projects.</p>
+          <ul class="bullets">
+            <li><b>Secure, event-driven systems:</b> developed military-grade, event-driven systems for secure environments; contributed to a microservice-based, real-time monitoring system using RabbitMQ and Redis.</li>
+            <li><b>Network analytics:</b> built a network analyzer with Python, PyQt and Tshark, integrated with Elasticsearch and Kibana to visualize cross-network traffic patterns.</li>
+            <li><b>Web, desktop &amp; integration apps:</b> developed web and desktop applications with Node.js, React and Electron, and integration server apps with .NET Framework, Entity Framework and PostgreSQL.</li>
+            <li><b>Cloud &amp; CI:</b> built CI pipelines and deployed full-stack applications on scalable AWS infrastructure — Elastic Beanstalk, Lambda, DynamoDB, Amplify and CloudFront.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>INTERNSHIPS</h2>
+        <div class="interns">
+          <article class="job">
+            <h3>Huawei Ltd.</h3>
+            <p class="when">Aug – Sep 2017 · Istanbul</p>
+            <ul class="bullets">
+              <li>Developed a Java big-data application on Apache Hadoop, with MapReduce jobs generating analytical statistics from distributed data.</li>
+              <li>Hands-on with data-processing pipelines and scalable backend systems.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <h3>Onbiron R&amp;D Ltd.</h3>
+            <p class="when">Jun – Aug 2017 · Ankara</p>
+            <ul class="bullets">
+              <li>Developed a RESTful API with Node.js and MongoDB to define and manage rule sets for IoT devices.</li>
+              <li>Built the companion web interface with HTML, jQuery, Bootstrap and Handlebars.js.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <h3>Türk Telekom</h3>
+            <p class="when">Jun – Aug 2016 · İzmir</p>
+            <ul class="bullets">
+              <li>Studied network layers, packet structures and NIC behavior for traffic analysis.</li>
+              <li>Used Wireshark filters to identify problematic TCP/UDP connections and flow-impacting peers.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>TECHNICAL SKILLS</h2>
+        <dl class="skills">
+          <dt>Languages</dt>
+          <dd><strong>JavaScript, TypeScript</strong>, Python, Java, C#, C++</dd>
+          <dt>Frameworks</dt>
+          <dd><strong>Node.js, React</strong>, Express, Redux, Electron, Material UI, Bootstrap</dd>
+          <dt>Data &amp; messaging</dt>
+          <dd>PostgreSQL, MySQL, MongoDB, DynamoDB, Redis, RabbitMQ</dd>
+          <dt>Search</dt>
+          <dd>Elasticsearch, OpenSearch, Fredhopper</dd>
+          <dt>Cloud &amp; DevOps</dt>
+          <dd>AWS (Elastic Beanstalk, Lambda, DynamoDB, Amplify, CloudFront), GCP, Docker, Kubernetes, Jenkins, CI/CD</dd>
+          <dt>Testing &amp; observability</dt>
+          <dd>Cypress, Datadog, New Relic, Kibana, Wireshark</dd>
+          <dt>Also</dt>
+          <dd>.NET Framework, Entity Framework, PyQt, Tshark, Apache Hadoop, MapReduce, Magento APIs, jQuery, Handlebars.js, JIRA, Git, Slack</dd>
+        </dl>
+      </section>
+
+      <div class="cols">
+        <section>
+          <h2>EDUCATION</h2>
+          <div class="entry">
+            <p class="entry-head"><b>Middle East Technical University (METU)</b></p>
+            <p class="when">2013 – 2019</p>
+            <p>B.S., Department of Computer Engineering</p>
+          </div>
+          <div class="entry">
+            <p class="entry-head"><b>Private Çakabey Schools</b></p>
+            <p class="when">2009 – 2013</p>
+            <p>High School</p>
+          </div>
+
+          <h2 style="margin-top: 4.6mm">LANGUAGES</h2>
+          <ul class="langs">
+            <li><span>Turkish</span><span>Native</span></li>
+            <li><span>English</span><span>C2</span></li>
+            <li><span>German</span><span>A1</span></li>
+            <li><span>Dutch</span><span>A1</span></li>
+          </ul>
+        </section>
+        <section>
+          <h2>AWARDS &amp; PROJECTS</h2>
+          <div class="entry">
+            <p class="entry-head"><b>OBSS Code Master Algorithm Competition</b></p>
+            <p class="when">2019</p>
+            <p>Placed 4th in the competition at METU and advanced to the next stage.</p>
+          </div>
+          <div class="entry">
+            <p class="entry-head"><b>METU CEC CCNA Networking Academy</b></p>
+            <p class="when">2015</p>
+            <p>Completed the 9-week CCNA course run by METU CEC.</p>
+          </div>
+          <div class="entry">
+            <p class="entry-head"><b>Finding Optimum Loop Count in For Loops</b></p>
+            <p class="when">2012</p>
+            <p>Core member of a computer-science project presented at the DOESEF Education Science Energy Engineering Fair and the Izmir University of Economics Computer and Engineering Fair.</p>
+          </div>
+        </section>
+      </div>
+
+      <p class="foot-note">Interactive CV &amp; real-time 3D showreel (designed and coded by me): <a href="https://www.irfanck.com/">irfanck.com</a></p>
+    </main>
+
+    <script type="module">
+      import { yearsOfExperience } from './js/reel/timeline.js';
+      import { decodePhone, phoneCanvas } from './js/phone.js';
+      document.querySelectorAll('[data-years]').forEach((el) => (el.textContent = yearsOfExperience()));
+
+      // Phone: a click on screen, or automatically for print / the PDF export (?print=1).
+      const slot = document.getElementById('phoneSlot');
+      const reveal = (scale) => {
+        if (slot.querySelector('canvas')) return;
+        const cs = getComputedStyle(slot);
+        // Canvas text renders a touch heavier than DOM text; 400 matches the 500-weight list visually.
+        const canvas = phoneCanvas(decodePhone(), { size: parseFloat(cs.fontSize), color: cs.color, weight: 400, family: "'Geist Mono', ui-monospace, monospace", scale });
+        canvas.setAttribute('role', 'img');
+        canvas.setAttribute('aria-label', 'Phone number');
+        slot.replaceChildren(canvas);
+      };
+      const fontsReady = document.fonts.load("500 10px 'Geist Mono'").catch(() => {});
+      document.getElementById('revealPhone').addEventListener('click', () => fontsReady.then(() => reveal()));
+      addEventListener('beforeprint', () => reveal(4));
+      if (new URLSearchParams(location.search).has('print')) await fontsReady.then(() => reveal(4));
+    </script>
+  </body>
+</html>

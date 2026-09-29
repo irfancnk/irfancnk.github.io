@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Irfan Can Kaleli — Senior Full-Stack Engineer</title>
+    <meta name="description" content="Irfan Can Kaleli — senior full-stack engineer, backend-first. 8+ years building search, catalog and event-driven systems with Node.js and React for luxury e-commerce, ad-tech and high-security R&D." />
+    <meta name="author" content="Irfan Can Kaleli" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
+    <link rel="canonical" href="https://www.irfanck.com/" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Irfan Can Kaleli — Senior Full-Stack Engineer" />
+    <meta property="og:description" content="Backend-first senior full-stack engineer. Node.js, React, TypeScript, Elasticsearch, Kubernetes and AWS." />
+    <meta property="og:image" content="https://www.irfanck.com/media/poster.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:url" content="https://www.irfanck.com/" />
+    <meta property="og:video" content="https://www.irfanck.com/media/showreel.mp4" />
+    <meta property="og:site_name" content="Irfan Can Kaleli" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Irfan Can Kaleli",
+        "jobTitle": "Senior Full-Stack Engineer",
+        "email": "mailto:irfancnkaleli@gmail.com",
+        "url": "https://www.irfanck.com/",
+        "sameAs": ["https://www.linkedin.com/in/irfan-can-kaleli/", "https://github.com/irfancnk", "https://www.irfanck.com/"],
+        "worksFor": { "@type": "Organization", "name": "Ounass" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Middle East Technical University" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Ankara", "addressCountry": "TR" },
+        "knowsLanguage": ["tr", "en", "de", "nl"]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Liquid Glass lens: an edge map that bends the backdrop at a glass control's rim (Chromium). -->
+    <svg class="lens-defs" width="0" height="0" aria-hidden="true" focusable="false">
+      <filter id="lg-lens" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+        <feImage id="lgMap" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" result="map" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="22" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+    <!-- The film is the page's backdrop: a system built live on a canvas, behind everything. -->
+    <div class="backdrop" aria-hidden="true">
+      <canvas id="reel"></canvas>
+      <div class="backdrop-scrim"></div>
+    </div>
+
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Irfan Can Kaleli — top of page">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" /><circle cx="20" cy="19.5" r="3.7" /><path d="M20 28v17M30.5 19v26M44.5 19 31.5 33M36 29l9 16" /></svg>
+          <span class="brand-name">Irfan Can Kaleli</span>
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Sections">
+          <span class="nav-pill" aria-hidden="true"></span>
+          <a href="#profile">Profile</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-blue btn-sm nav-cta" href="files/Irfan-Can-Kaleli-CV.pdf" download>Download CV</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <button class="hero-hit" id="hit" type="button" tabindex="-1" aria-label="Play or pause the film"></button>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">Senior Full-Stack Engineer</p>
+            <h1 id="hero-title" class="hero-title">Irfan Can Kaleli</h1>
+            <p class="hero-sub">Backend-first engineer building search, catalog and event-driven systems with Node.js and React. <span data-years>8</span>+ years, based in Ankara and working remotely.</p>
+            <div class="hero-cta">
+              <a class="btn btn-blue" href="files/Irfan-Can-Kaleli-CV.pdf" download>Download CV</a>
+              <a class="btn btn-outline" href="#experience">View experience</a>
+              <button class="link-play" id="watchFilm" type="button">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.25" /><path d="M6.6 5.3v5.4l4.2-2.7z" /></svg>
+                Watch the film <span class="muted">0:20</span>
+              </button>
+            </div>
+            <p class="hero-credit">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5 16.5 6v8L10 17.5 3.5 14V6z" /><path d="M3.5 6 10 9.5 16.5 6M10 9.5v8" /></svg>
+              The 3D film behind this page is my own work, designed and coded in three.js. <a href="#film-notes" data-open-notes>How it’s made</a>
+            </p>
+          </div>
+
+          <div class="player" id="player" role="group" aria-label="Film controls">
+            <button class="ctrl ctrl-ring" id="play" type="button" aria-label="Pause the film">
+              <svg class="ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="ring-track" cx="20" cy="20" r="17" /><circle class="ring-fill" id="ringFill" cx="20" cy="20" r="17" /></svg>
+              <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.2 3.5v9M10.8 3.5v9" /></svg>
+              <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.4v9.2a.6.6 0 0 0 .9.5l7.3-4.6a.6.6 0 0 0 0-1L5.9 2.9a.6.6 0 0 0-.9.5z" /></svg>
+            </button>
+            <button class="ctrl ctrl-sound" type="button" data-sound aria-pressed="false" aria-label="Turn sound on">
+              <span class="sound-icon" aria-hidden="true">
+                <svg class="i-off" viewBox="0 0 20 20"><path d="M3.5 7.5h2.8L10 4.3v11.4l-3.7-3.2H3.5z" /><path d="m13.5 8 4 4m0-4-4 4" /></svg>
+                <span class="eq"><i></i><i></i><i></i></span>
+                <span class="spin"></span>
+              </span>
+              <span class="sound-label">Sound off</span>
+            </button>
+            <button class="ctrl hide-sm" id="cinema" type="button" aria-label="Watch fullscreen">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 7.5v-4h4M16.5 7.5v-4h-4M3.5 12.5v4h4M16.5 12.5v4h-4" /></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Fullscreen player bar -->
+        <div class="cinema-bar" id="cinemaBar" role="group" aria-label="Film player">
+          <button class="ctrl" id="cinemaPlay" type="button" aria-label="Pause the film">
+            <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.2 3.5v9M10.8 3.5v9" /></svg>
+            <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.4v9.2a.6.6 0 0 0 .9.5l7.3-4.6a.6.6 0 0 0 0-1L5.9 2.9a.6.6 0 0 0-.9.5z" /></svg>
+          </button>
+          <div class="scrub">
+            <div class="scrub-track" id="segments" aria-hidden="true"></div>
+            <span class="scrub-thumb" id="scrubThumb" aria-hidden="true"></span>
+            <input id="seek" type="range" min="0" max="20" step="0.01" value="0" aria-label="Seek the film" />
+            <ol class="chapters" id="chapters" aria-label="Chapters"></ol>
+          </div>
+          <output class="timecode" id="timecode">0:00 <span>/ 0:20</span></output>
+          <button class="ctrl ctrl-sound compact" type="button" data-sound aria-pressed="false" aria-label="Turn sound on">
+            <span class="sound-icon" aria-hidden="true">
+              <svg class="i-off" viewBox="0 0 20 20"><path d="M3.5 7.5h2.8L10 4.3v11.4l-3.7-3.2H3.5z" /><path d="m13.5 8 4 4m0-4-4 4" /></svg>
+              <span class="eq"><i></i><i></i><i></i></span>
+              <span class="spin"></span>
+            </span>
+          </button>
+          <a class="ctrl" href="media/showreel.mp4" download="Irfan-Can-Kaleli-Showreel.mp4" aria-label="Download the film (MP4)">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9M6.2 9l3.8 3.8L13.8 9M4 16.5h12" /></svg>
+          </a>
+          <button class="ctrl" id="exitCinema" type="button" aria-label="Exit fullscreen">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 3.5v4h-4M12.5 3.5v4h4M7.5 16.5v-4h-4M12.5 16.5v-4h4" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ── Profile ──────────────────────────────────────────────────────── -->
+      <section class="section" id="profile" aria-labelledby="profile-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <h2 id="profile-title">Profile</h2>
+          </header>
+          <div class="profile-grid">
+            <div class="profile-text" data-reveal>
+              <p class="lead">
+                Backend-first full-stack engineer with <span data-years>8</span>+ years building reliable, scalable products in Node.js and React — for a
+                multi-brand luxury e-commerce platform, a mobile ad-tech company and high-security R&amp;D.
+              </p>
+              <p>Remote-first since 2021, working with teams in Dubai and New York from Ankara. I enjoy turning complex requirements into simple, maintainable solutions, and do my best work where code quality, collaboration and product impact matter.</p>
+            </div>
+            <dl class="facts card tilt" data-tilt="3" data-reveal>
+              <div><dt>Currently</dt><dd>Full-Stack Engineer, Catalog team — Ounass</dd></div>
+              <div><dt>Based in</dt><dd>Çankaya, Ankara, Turkey</dd></div>
+              <div><dt>Working</dt><dd>Remote, with teams in Dubai and New York</dd></div>
+              <div><dt>Education</dt><dd>B.S. Computer Engineering, METU</dd></div>
+            </dl>
+          </div>
+
+          <ul class="stats" aria-label="Key numbers">
+            <li class="card tilt" data-reveal><span class="stat-num"><span data-years>8</span>+</span><span class="stat-label">Years in engineering</span><span class="stat-sub">Full-time since July 2018</span></li>
+            <li class="card tilt" data-reveal><span class="stat-num">6</span><span class="stat-label">Roles</span><span class="stat-sub">3 full-time · 3 internships</span></li>
+            <li class="card tilt" data-reveal><span class="stat-num">3</span><span class="stat-label">Countries</span><span class="stat-sub">Teams in Turkey, the US and the UAE</span></li>
+            <li class="card tilt" data-reveal><span class="stat-num">4</span><span class="stat-label">Languages</span><span class="stat-sub">Turkish · English · German · Dutch</span></li>
+          </ul>
+
+          <details class="film-notes card" id="film-notes" data-reveal>
+            <summary>About the 3D film — designed and coded by me</summary>
+            <p>The backdrop is a 20-second 3D film that I designed and coded myself; it isn’t a template or a stock animation. It runs live in your browser with three.js and WebGL, and designs a real-time messaging platform in the open, from a single server to a global system: a WebSocket gateway and presence in Redis; a load balancer, gateway replicas and a message router; a message store, RabbitMQ and push notifications for offline delivery; encrypted media with a CDN and Lambda thumbnails; group fan-out and contact discovery on Elasticsearch; auth, an end-to-end key server and rate limits; then Kubernetes, Jenkins, Datadog and Kibana — and finally three regions with replicated storage. Every link is a real data path, built with technologies from the CV. The developer at the glass desk is me (IrfanK): before each stage he types the change, and a deploy beam carries it from his screen to the components that land. The same code renders the downloadable films frame by frame, encoding the MP4s in the browser with WebCodecs.</p>
+            <p class="film-dl">Download: <a href="media/showreel.mp4" download="Irfan-Can-Kaleli-Showreel.mp4">16:9 MP4</a> · <a href="media/showreel-vertical.mp4" download="Irfan-Can-Kaleli-Showreel-Vertical.mp4">9:16 MP4</a> · <a href="https://github.com/irfancnk/irfancnk.github.io" target="_blank" rel="noopener">Source code on GitHub ↗</a></p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ── Highlights ───────────────────────────────────────────────────── -->
+      <section class="section" id="highlights" aria-labelledby="highlights-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <h2 id="highlights-title">Highlights</h2>
+            <p class="section-sub">Selected work from each role.</p>
+          </header>
+          <div class="tiles">
+            <article class="tile card tilt" data-reveal>
+              <p class="tile-meta">Ounass · 2022 – present</p>
+              <h3>Search and catalog at scale</h3>
+              <p>Product listing and search across multiple regions for a multi-brand, multi-country luxury e-commerce platform: relevance, facets and sorting, plus the product indexing behind them, on Elasticsearch, OpenSearch and Fredhopper.</p>
+              <p class="tile-stack">Elasticsearch · OpenSearch · Fredhopper · Node.js · React</p>
+            </article>
+            <article class="tile card tilt" data-reveal>
+              <p class="tile-meta">Kargo · 2021 – 2022</p>
+              <h3>Shared React component library</h3>
+              <p>Built and maintained the library used across multiple projects on a mobile ad-creation platform, with a consistent Material UI system and Cypress end-to-end coverage.</p>
+              <p class="tile-stack">React · TypeScript · Material UI · Cypress</p>
+            </article>
+            <article class="tile card tilt" data-reveal>
+              <p class="tile-meta">Onbiron R&amp;D · 2018 – 2021</p>
+              <h3>Event-driven systems for secure environments</h3>
+              <p>Military-grade, event-driven systems, plus a microservice-based real-time monitoring system built on RabbitMQ and Redis.</p>
+              <p class="tile-stack">RabbitMQ · Redis · Microservices · .NET</p>
+            </article>
+            <article class="tile card tilt" data-reveal>
+              <p class="tile-meta">Onbiron R&amp;D · 2018 – 2021</p>
+              <h3>Network traffic analytics</h3>
+              <p>A network analyzer in Python, PyQt and Tshark, feeding Elasticsearch and Kibana to visualize cross-network traffic patterns.</p>
+              <p class="tile-stack">Python · PyQt · Tshark · Elasticsearch · Kibana</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Experience ───────────────────────────────────────────────────── -->
+      <section class="section" id="experience" aria-labelledby="exp-title">
+        <div class="container split">
+          <header class="section-head side">
+            <div class="sticky" data-reveal>
+              <h2 id="exp-title">Experience</h2>
+              <p class="section-sub">Remote since 2021, working with teams in Dubai and New York from Ankara.</p>
+            </div>
+          </header>
+
+          <div class="split-body">
+            <ol class="roles" id="roles">
+              <li class="role" data-reveal>
+                <article class="role-card card tilt" data-tilt="2">
+                  <header class="role-head">
+                    <div>
+                      <h3>Ounass <span class="now">Current</span></h3>
+                      <p class="role-title">Full-Stack Engineer · Catalog team</p>
+                    </div>
+                    <p class="role-when"><span>Jan 2022 – Present</span><span>Dubai, UAE · Remote</span></p>
+                  </header>
+                  <p class="role-context">A multi-brand, multi-country luxury e-commerce platform serving the Middle East. On the Catalog team I work on how products are indexed, listed and found, from the data pipeline to the storefront.</p>
+                  <ul>
+                    <li><b>Search &amp; discovery.</b> Build and maintain high-performance product listing and search across multiple regions, covering relevance, facets, filters and sorting, on Elasticsearch, OpenSearch and Fredhopper.</li>
+                    <li><b>Product indexing.</b> Handle product indexing so catalog changes reach search and listing pages quickly and consistently in every region.</li>
+                    <li><b>Multi-brand, multi-region.</b> Deliver listing and search for many brands and countries on one shared platform, with regional catalogs.</li>
+                    <li><b>Full-stack features.</b> Ship scalable features end to end with Node.js, React and PostgreSQL, from API and data model to the storefront UI.</li>
+                    <li><b>Integrations.</b> Connect catalog and platform systems through Redis caching, RabbitMQ messaging and Magento APIs.</li>
+                    <li><b>Cloud &amp; reliability.</b> Deploy and run services on AWS with Docker and Kubernetes; monitor performance and logs with Datadog, New Relic and Kibana to keep listing and search fast and stable.</li>
+                    <li><b>Delivery.</b> Ship continuously through a Jenkins CI/CD pipeline, collaborating remotely with the Dubai team via JIRA, Git and Slack.</li>
+                  </ul>
+                  <p class="role-stack"><span>Stack</span> Node.js, React, PostgreSQL, Elasticsearch, OpenSearch, Fredhopper, Redis, RabbitMQ, Magento APIs, AWS, Docker, Kubernetes, Jenkins, Datadog, New Relic, Kibana</p>
+                </article>
+              </li>
+
+              <li class="role" data-reveal>
+                <article class="role-card card tilt" data-tilt="2">
+                  <header class="role-head">
+                    <div>
+                      <h3>Kargo</h3>
+                      <p class="role-title">Full-Stack Engineer · Kargo Global Ltd.</p>
+                    </div>
+                    <p class="role-when"><span>Apr 2021 – Nov 2022</span><span>New York, US · Remote</span></p>
+                  </header>
+                  <p class="role-context">Platform for mobile-oriented ad creation.</p>
+                  <ul>
+                    <li><b>Component library.</b> Built and maintained a shared React component library used across multiple projects, with a consistent UI built on Material UI.</li>
+                    <li><b>Product engineering.</b> Developed product features with Node.js, React, TypeScript and MySQL.</li>
+                    <li><b>Quality.</b> Wrote end-to-end tests in Cypress to keep the UI reliable.</li>
+                    <li><b>Deployment.</b> Deployed services with Docker on Google Cloud Platform (GCP).</li>
+                  </ul>
+                  <p class="role-stack"><span>Stack</span> React, TypeScript, Node.js, MySQL, Material UI, Cypress, Docker, GCP</p>
+                </article>
+              </li>
+
+              <li class="role" data-reveal>
+                <article class="role-card card tilt" data-tilt="2">
+                  <header class="role-head">
+                    <div>
+                      <h3>Onbiron R&amp;D</h3>
+                      <p class="role-title">Software Engineer · Onbiron R&amp;D Ltd.</p>
+                    </div>
+                    <p class="role-when"><span>Jul 2018 – Apr 2021</span><span>Ankara, Turkey</span></p>
+                  </header>
+                  <p class="role-context">Full-cycle development across varied tech stacks in high-security projects.</p>
+                  <ul>
+                    <li><b>Secure, event-driven systems.</b> Developed military-grade, event-driven systems for secure environments, and contributed to a microservice-based, real-time monitoring system using RabbitMQ and Redis.</li>
+                    <li><b>Network analytics.</b> Built a network analyzer with Python, PyQt and Tshark, integrated with Elasticsearch and Kibana to visualize cross-network traffic patterns.</li>
+                    <li><b>Web, desktop &amp; integration apps.</b> Developed web and desktop applications with Node.js, React and Electron, and integration server apps with .NET Framework, Entity Framework and PostgreSQL.</li>
+                    <li><b>Cloud &amp; CI.</b> Built CI pipelines and deployed full-stack applications on scalable AWS infrastructure — Elastic Beanstalk, Lambda, DynamoDB, Amplify and CloudFront.</li>
+                  </ul>
+                  <p class="role-stack"><span>Stack</span> Node.js, React, Electron, RabbitMQ, Redis, Python, Elasticsearch, Kibana, .NET, PostgreSQL, AWS</p>
+                </article>
+              </li>
+            </ol>
+
+            <div class="early" data-reveal>
+              <h3 class="block-title">Internships</h3>
+              <div class="early-grid">
+                <article class="card tilt" data-tilt="4">
+                  <p class="early-when">Aug – Sep 2017 · Istanbul</p>
+                  <h4>Huawei</h4>
+                  <ul>
+                    <li><b>Big data.</b> Developed a Java application on Apache Hadoop to process large datasets, with MapReduce jobs generating analytical statistics from distributed data.</li>
+                    <li>Gained hands-on experience with data-processing pipelines and scalable backend systems.</li>
+                  </ul>
+                </article>
+                <article class="card tilt" data-tilt="4">
+                  <p class="early-when">Jun – Aug 2017 · Ankara</p>
+                  <h4>Onbiron R&amp;D</h4>
+                  <ul>
+                    <li><b>IoT rules API.</b> Developed a RESTful API with Node.js and MongoDB to define and manage rule sets for IoT devices.</li>
+                    <li><b>Rule console.</b> Built the companion web interface with HTML, jQuery, Bootstrap and Handlebars.js for rule configuration and device interaction.</li>
+                  </ul>
+                </article>
+                <article class="card tilt" data-tilt="4">
+                  <p class="early-when">Jun – Aug 2016 · İzmir</p>
+                  <h4>Türk Telekom</h4>
+                  <ul>
+                    <li><b>Traffic analysis.</b> Studied network layers, packet structures and NIC behavior for traffic analysis.</li>
+                    <li><b>Wireshark.</b> Used filters to identify problematic TCP/UDP connections and detect flow-impacting peers.</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Skills ───────────────────────────────────────────────────────── -->
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container split">
+          <header class="section-head side">
+            <div class="sticky" data-reveal>
+              <h2 id="skills-title">Skills</h2>
+              <p class="section-sub">Hover or focus a skill to see where it was used.</p>
+              <p class="legend"><span class="legend-dot" aria-hidden="true"></span>Primary stack</p>
+            </div>
+          </header>
+          <div class="split-body skills card tilt" data-tilt="1.5" data-reveal>
+            <div class="skills-filter">
+              <div class="segmented" role="radiogroup" aria-label="Show the skills used at">
+                <span class="segmented-thumb" aria-hidden="true"></span>
+                <button type="button" role="radio" aria-checked="true" data-filter="all">All</button>
+                <button type="button" role="radio" aria-checked="false" data-filter="Ounass">Ounass</button>
+                <button type="button" role="radio" aria-checked="false" data-filter="Kargo">Kargo</button>
+                <button type="button" role="radio" aria-checked="false" data-filter="Onbiron R&amp;D">Onbiron R&amp;D</button>
+                <button type="button" role="radio" aria-checked="false" data-filter="intern">Internships</button>
+              </div>
+              <p class="filter-count" id="filterCount" aria-live="polite"></p>
+            </div>
+            <div class="skill-group">
+              <h3 class="block-title">Languages</h3>
+              <ul class="chips">
+                <li class="chip" tabindex="0" data-used="Ounass · Kargo · Onbiron R&amp;D">JavaScript<span class="sr-only">, used at Ounass, Kargo, Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Kargo">TypeScript<span class="sr-only">, used at Kargo</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">Python<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Huawei (intern)">Java<span class="sr-only">, used at Huawei (intern)</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">C#<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip">C++</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="block-title">Frameworks &amp; libraries</h3>
+              <ul class="chips">
+                <li class="chip is-primary" tabindex="0" data-used="Ounass · Kargo · Onbiron R&amp;D · Onbiron R&amp;D (intern)">Node.js<span class="sr-only">, used at Ounass, Kargo, Onbiron R&amp;D, Onbiron R&amp;D (intern)</span></li>
+                <li class="chip is-primary" tabindex="0" data-used="Ounass · Kargo · Onbiron R&amp;D">React<span class="sr-only">, used at Ounass, Kargo, Onbiron R&amp;D</span></li>
+                <li class="chip">Express</li>
+                <li class="chip">Redux</li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">Electron<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Kargo">Material UI<span class="sr-only">, used at Kargo</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D (intern)">Bootstrap<span class="sr-only">, used at Onbiron R&amp;D (intern)</span></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="block-title">Data &amp; messaging</h3>
+              <ul class="chips">
+                <li class="chip" tabindex="0" data-used="Ounass · Onbiron R&amp;D">PostgreSQL<span class="sr-only">, used at Ounass, Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Kargo">MySQL<span class="sr-only">, used at Kargo</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D (intern)">MongoDB<span class="sr-only">, used at Onbiron R&amp;D (intern)</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">DynamoDB<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass · Onbiron R&amp;D">Redis<span class="sr-only">, used at Ounass, Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass · Onbiron R&amp;D">RabbitMQ<span class="sr-only">, used at Ounass, Onbiron R&amp;D</span></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="block-title">Search</h3>
+              <ul class="chips">
+                <li class="chip" tabindex="0" data-used="Ounass · Onbiron R&amp;D">Elasticsearch<span class="sr-only">, used at Ounass, Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">OpenSearch<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">Fredhopper<span class="sr-only">, used at Ounass</span></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="block-title">Cloud &amp; DevOps</h3>
+              <ul class="chips">
+                <li class="chip" tabindex="0" data-used="Ounass · Onbiron R&amp;D">AWS<span class="sr-only">, used at Ounass, Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Kargo">GCP<span class="sr-only">, used at Kargo</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass · Kargo">Docker<span class="sr-only">, used at Ounass, Kargo</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">Kubernetes<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">Jenkins<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass · Onbiron R&amp;D">CI/CD<span class="sr-only">, used at Ounass, Onbiron R&amp;D</span></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="block-title">Testing &amp; observability</h3>
+              <ul class="chips">
+                <li class="chip" tabindex="0" data-used="Kargo">Cypress<span class="sr-only">, used at Kargo</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">Datadog<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">New Relic<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass · Onbiron R&amp;D">Kibana<span class="sr-only">, used at Ounass, Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Türk Telekom (intern)">Wireshark<span class="sr-only">, used at Türk Telekom (intern)</span></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="block-title">Also worked with</h3>
+              <ul class="chips">
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">.NET Framework<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">Entity Framework<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">PyQt<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D">Tshark<span class="sr-only">, used at Onbiron R&amp;D</span></li>
+                <li class="chip" tabindex="0" data-used="Huawei (intern)">Apache Hadoop<span class="sr-only">, used at Huawei (intern)</span></li>
+                <li class="chip" tabindex="0" data-used="Huawei (intern)">MapReduce<span class="sr-only">, used at Huawei (intern)</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">Magento APIs<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D (intern)">jQuery<span class="sr-only">, used at Onbiron R&amp;D (intern)</span></li>
+                <li class="chip" tabindex="0" data-used="Onbiron R&amp;D (intern)">Handlebars.js<span class="sr-only">, used at Onbiron R&amp;D (intern)</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">JIRA<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">Git<span class="sr-only">, used at Ounass</span></li>
+                <li class="chip" tabindex="0" data-used="Ounass">Slack<span class="sr-only">, used at Ounass</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Education, awards, languages ─────────────────────────────────── -->
+      <section class="section" id="education" aria-labelledby="edu-title">
+        <div class="container split">
+          <header class="section-head side">
+            <div class="sticky" data-reveal>
+              <h2 id="edu-title">Education</h2>
+              <p class="section-sub">Degree, awards and languages.</p>
+            </div>
+          </header>
+          <div class="split-body edu">
+            <div class="edu-block card tilt" data-tilt="2" data-reveal>
+              <h3 class="block-title">Education</h3>
+              <ul class="edu-list">
+                <li>
+                  <span class="edu-years">2013 – 2019</span>
+                  <div>
+                    <p class="edu-name">Middle East Technical University <span class="muted">(METU)</span></p>
+                    <p class="edu-detail">B.S., Department of Computer Engineering</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="edu-years">2009 – 2013</span>
+                  <div>
+                    <p class="edu-name">Private Çakabey Schools</p>
+                    <p class="edu-detail">High School</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="edu-block card tilt" data-tilt="2" data-reveal>
+              <h3 class="block-title">Awards &amp; projects</h3>
+              <ul class="edu-list">
+                <li>
+                  <span class="edu-years">2019</span>
+                  <div>
+                    <p class="edu-name">OBSS Code Master Algorithm Competition</p>
+                    <p class="edu-detail">Placed 4th in the competition at METU and advanced to the next stage.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="edu-years">2015</span>
+                  <div>
+                    <p class="edu-name">METU CEC CCNA Networking Academy</p>
+                    <p class="edu-detail">Completed the 9-week CCNA course run by METU CEC.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="edu-years">2012</span>
+                  <div>
+                    <p class="edu-name">Project: Finding Optimum Loop Count in For Loops</p>
+                    <p class="edu-detail">Core member of a computer-science project presented at the DOESEF Education Science Energy Engineering Fair and the Izmir University of Economics Computer and Engineering Fair.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="edu-block card tilt" data-tilt="2" data-reveal>
+              <h3 class="block-title">Languages</h3>
+              <ul class="langs" aria-label="Languages spoken, on the CEFR scale">
+                <li style="--level: 6"><span class="lang-name">Turkish</span><span class="lang-meter" aria-hidden="true"><i></i></span><span class="lang-level">Native</span></li>
+                <li style="--level: 6"><span class="lang-name">English</span><span class="lang-meter" aria-hidden="true"><i></i></span><span class="lang-level">C2</span></li>
+                <li style="--level: 1"><span class="lang-name">German</span><span class="lang-meter" aria-hidden="true"><i></i></span><span class="lang-level">A1</span></li>
+                <li style="--level: 1"><span class="lang-name">Dutch</span><span class="lang-meter" aria-hidden="true"><i></i></span><span class="lang-level">A1</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Contact ──────────────────────────────────────────────────────── -->
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container split">
+          <header class="section-head side">
+            <div class="sticky" data-reveal>
+              <h2 id="contact-title">Contact</h2>
+              <div class="contact-cta">
+                <a class="btn btn-blue" href="mailto:irfancnkaleli@gmail.com">Email</a>
+                <a class="btn btn-outline" href="files/Irfan-Can-Kaleli-CV.pdf" download>Download CV</a>
+              </div>
+            </div>
+          </header>
+          <div class="split-body">
+            <ul class="contact-list card tilt" data-tilt="2" data-reveal>
+              <li>
+                <span class="c-label">Email</span>
+                <a class="c-value" href="mailto:irfancnkaleli@gmail.com">irfancnkaleli@gmail.com</a>
+                <button class="pill-btn" type="button" data-copy="irfancnkaleli@gmail.com" aria-label="Copy email address">Copy</button>
+              </li>
+              <li>
+                <span class="c-label">Phone</span>
+                <!-- Never in the markup: decoded and drawn as an image only after a click. -->
+                <span class="c-value phone-slot" id="phoneSlot"><span class="muted">Hidden from bots</span></span>
+                <button class="pill-btn" type="button" id="revealPhone">Show number</button>
+              </li>
+              <li>
+                <span class="c-label">LinkedIn</span>
+                <a class="c-value" href="https://www.linkedin.com/in/irfan-can-kaleli/" target="_blank" rel="noopener">linkedin.com/in/irfan-can-kaleli</a>
+                <span class="c-arrow" aria-hidden="true">↗</span>
+              </li>
+              <li>
+                <span class="c-label">GitHub</span>
+                <a class="c-value" href="https://github.com/irfancnk" target="_blank" rel="noopener">github.com/irfancnk</a>
+                <span class="c-arrow" aria-hidden="true">↗</span>
+              </li>
+              <li>
+                <span class="c-label">Location</span>
+                <span class="c-value">Çankaya, Ankara, Turkey <span class="muted">· GMT+3</span></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Irfan Can Kaleli</p>
+        <p class="colophon">Designed and built by Irfan Can Kaleli, including the real-time 3D film (three.js · WebGL). <a href="https://github.com/irfancnk/irfancnk.github.io" target="_blank" rel="noopener">Source</a>.<span class="keys"> Press K to pause, M for sound, F for fullscreen.</span></p>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <!-- Compact controls once the film is behind the content. -->
+    <div class="mini" id="mini" role="group" aria-label="Film controls">
+      <button class="ctrl" id="miniPlay" type="button" aria-label="Pause the film">
+        <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.2 3.5v9M10.8 3.5v9" /></svg>
+        <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.4v9.2a.6.6 0 0 0 .9.5l7.3-4.6a.6.6 0 0 0 0-1L5.9 2.9a.6.6 0 0 0-.9.5z" /></svg>
+      </button>
+      <button class="ctrl ctrl-sound compact" type="button" data-sound aria-pressed="false" aria-label="Turn sound on">
+        <span class="sound-icon" aria-hidden="true">
+          <svg class="i-off" viewBox="0 0 20 20"><path d="M3.5 7.5h2.8L10 4.3v11.4l-3.7-3.2H3.5z" /><path d="m13.5 8 4 4m0-4-4 4" /></svg>
+          <span class="eq"><i></i><i></i><i></i></span>
+          <span class="spin"></span>
+        </span>
+      </button>
+      <a class="ctrl" href="#top" aria-label="Back to the film">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4.5M5.5 9 10 4.5 14.5 9" /></svg>
+      </a>
+    </div>
+
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
